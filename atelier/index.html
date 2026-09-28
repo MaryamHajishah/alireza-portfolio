@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Alireza — architectural engineering student, Islamic Azad University, Karaj. Portfolio of coursework.">
+<title>Alireza · Portfolio (Atelier)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=Newsreader:ital,opsz,wght@1,6..72,400&family=DM+Mono:wght@400&display=swap">
+<style>
+/* Layout: a 12-column studio pin-up wall. Clean ground, cobalt taken from the drawing's night window, a 3×3 grid that mirrors the sheet. */
+:root{
+  --ground:#f3f3f1; --card:#ffffff; --ink:#141414; --soft:#666660; --rule:#d9d9d4; --cobalt:#2436b8;
+  --f-head:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --f-it:"Newsreader",Georgia,serif;
+  --f-mono:"DM Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#121313;--card:#1b1c1d;--ink:#ecebe7;--soft:#9a9a93;--rule:#2d2e2f;--cobalt:#8394ff;color-scheme:dark}}
+:root[data-theme="dark"]{--ground:#121313;--card:#1b1c1d;--ink:#ecebe7;--soft:#9a9a93;--rule:#2d2e2f;--cobalt:#8394ff;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--f-head);font-size:16px;line-height:1.6;margin:0}
+.page{max-width:1280px;margin-inline:auto;padding-inline:clamp(16px,4vw,48px);padding-block:0 64px}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;color:var(--soft);text-transform:uppercase}
+header.bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;border-bottom:1px solid var(--rule);position:sticky;top:env(safe-area-inset-top,0px);background:var(--ground);z-index:5}
+header.bar b{font-weight:700;letter-spacing:-.01em}
+header.bar nav{display:flex;gap:22px;flex-wrap:wrap}
+header.bar nav a{text-decoration:none;font-size:14px}
+header.bar nav a:hover{color:var(--cobalt)}
+
+.intro{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;padding-block:72px 88px;align-items:end}
+.intro h1{grid-column:1/9;font-size:clamp(44px,7.4vw,112px);line-height:.95;letter-spacing:-.045em;font-weight:500;margin:0;text-wrap:balance}
+.intro h1 i{font-family:var(--f-it);font-weight:400;letter-spacing:-.02em;color:var(--cobalt)}
+.intro .me{grid-column:10/13;grid-row:1/3}
+.intro .me img{aspect-ratio:4/5;object-fit:cover;width:100%;filter:grayscale(1) contrast(1.05)}
+.intro .me figcaption{margin-top:8px}
+.intro .meta{grid-column:1/9;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-top:1px solid var(--rule);padding-top:16px}
+.intro .meta p{margin:4px 0 0;font-size:15px}
+
+section{border-top:1px solid var(--ink);padding-block:28px 72px}
+.shead{display:flex;justify-content:space-between;gap:16px;align-items:baseline;margin-bottom:36px;flex-wrap:wrap}
+.shead h2{font-size:28px;font-weight:500;letter-spacing:-.02em;margin:0}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.card{background:var(--card);text-decoration:none;display:flex;flex-direction:column;border:1px solid var(--rule);transition:border-color .25s}
+.card:hover{border-color:var(--cobalt)}
+.card .thumb{aspect-ratio:4/3;overflow:hidden;background:#f6f7f8}
+.card .thumb img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform .6s ease}
+.card:hover .thumb img{transform:scale(1.04)}
+.card .body{padding:16px 18px 18px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.card h3{margin:0;font-size:19px;font-weight:500;letter-spacing:-.01em}
+.card.empty{border-style:dashed;background:transparent;align-items:center;justify-content:center;min-height:240px;text-align:center;padding:24px;color:var(--soft)}
+
+.project{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.project .text{grid-column:1/5;min-width:0}
+.project .text h3{font-size:clamp(34px,4vw,52px);font-weight:500;letter-spacing:-.035em;line-height:1;margin:0 0 20px}
+.project .text p{margin:0 0 14px;max-width:46ch}
+.spec{border-top:1px solid var(--rule);margin-top:24px}
+.spec div{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--rule);padding-block:9px;font-size:14px}
+.spec div span:last-child{text-align:right}
+.project .sheet{grid-column:6/13;background:#f6f7f8;padding:clamp(12px,3vw,36px);border:1px solid var(--rule)}
+.nine{grid-column:1/13;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:48px}
+.nine figure{margin:0;background:#f6f7f8;border:1px solid var(--rule)}
+.nine img{aspect-ratio:1;object-fit:contain;width:100%;padding:8%}
+.nine figcaption{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;border-top:1px solid var(--rule);background:var(--card);font-size:14px}
+.reflect{grid-column:1/13;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;margin-top:48px;padding-top:20px;border-top:1px solid var(--rule)}
+.reflect .mono{grid-column:1/4}
+.reflect p{grid-column:4/11;margin:0;font-family:var(--f-it);font-style:italic;font-size:clamp(20px,2.2vw,28px);line-height:1.35}
+
+.cv{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.cv h4{margin:0 0 8px;font-size:15px;font-weight:500}
+.cv ul{list-style:none;margin:0;padding:0}
+.cv li{border-top:1px solid var(--rule);padding-block:9px;font-size:15px;display:flex;justify-content:space-between;gap:12px}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--rule);padding-top:18px}
+.email{font-size:clamp(22px,3.4vw,40px);letter-spacing:-.02em;user-select:all;word-break:break-all}
+
+@media (max-width:820px){
+  .intro h1,.intro .meta,.project .text,.project .sheet,.reflect .mono,.reflect p{grid-column:1/-1}
+  .intro .me{grid-column:1/-1;grid-row:auto;max-width:280px}
+  .intro .meta{grid-template-columns:1fr}
+  .nine{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<div class="page">
+  <header class="bar">
+    <b id="nm"></b>
+    <nav aria-label="Main"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <div class="intro">
+    <h1 id="headline"></h1>
+    <figure class="me" style="margin:0"><img src="../img/portrait.jpg" alt="Portrait of Alireza"><figcaption class="mono">Portrait</figcaption></figure>
+    <div class="meta" id="meta"></div>
+  </div>
+
+  <section id="work">
+    <div class="shead"><h2>Selected work</h2><span class="mono" id="count"></span></div>
+    <div class="grid" id="cards"></div>
+  </section>
+
+  <div id="projects"></div>
+
+  <section id="about">
+    <div class="shead"><h2>About</h2><span class="mono">CV</span></div>
+    <div class="cv" id="cv"></div>
+  </section>
+
+  <section id="contact">
+    <div class="shead"><h2>Contact</h2><span class="mono">Internships · collaborations</span></div>
+    <p class="email" id="mail"></p>
+    <footer><span class="mono" id="copy"></span><span class="mono">Coursework portfolio</span></footer>
+  </section>
+</div>
+
+<script>
+/* ======= EDIT HERE — add a work by copying one object in WORKS ======= */
+const SITE = {
+  name: "Alireza", surname: "",
+  headline: "Architecture student. Drawing <i>openings</i>, frames and the views they hold.",
+  degree: "B.Sc. Architectural Engineering, in progress", school: "Islamic Azad University, Karaj", born: "2007",
+  email: "02xwrld@gmail.com",
+  cv: {
+    "Education": [["B.Sc. Architectural Engineering, Islamic Azad University, Karaj","Current"]],
+    "Skills": [["Freehand drawing","Hand"],["Marker rendering","Hand"],["[AutoCAD / Rhino / SketchUp]","Digital"]],
+    "Languages": [["Persian","Native"],["English","[Level]"]]
+  }
+};
+const WORKS = [{
+  id:"nine-windows", title:"Nine Windows", course:"Architectural drawing", year:"2026",
+  medium:"Marker and fineliner on paper", type:"Individual coursework",
+  cover:"../img/windows_clean.jpg",
+  brief:"Draw a set of windows that vary in proportion, division and frame, and give each one its own view.",
+  text:["Nine openings, each with a different mullion pattern and frame depth. Behind each sits a different view: city, garden, rain, river, blossom, sunset, stars and autumn.",
+        "Seen together, the sheet works as a catalogue of how a window's division changes what reaches the room."],
+  reflection:"The frame is the part of the drawing I would push next: sections through the sill and head would show depth, not only pattern.",
+  details:[["../img/window_01.jpg","City at dusk"],["../img/window_02.jpg","Garden, morning"],["../img/window_03.jpg","Night rain"],["../img/window_04.jpg","Six panes, one tree"],["../img/window_05.jpg","River in the woods"],["../img/window_06.jpg","Blossom"],["../img/window_07.jpg","Sunset in four panes"],["../img/window_08.jpg","Stars through leaves"],["../img/window_09.jpg","Autumn"]]
+}];
+/* ==================================================================== */
+const $=s=>document.querySelector(s), full=(SITE.name+" "+SITE.surname).trim();
+$("#nm").textContent=full; $("#headline").innerHTML=SITE.headline;
+$("#meta").innerHTML=[["Study",SITE.degree],["School",SITE.school],["Born",SITE.born]].map(([k,v])=>`<div><span class="mono">${k}</span><p>${v}</p></div>`).join("");
+$("#count").textContent=WORKS.length+(WORKS.length===1?" project":" projects");
+$("#cards").innerHTML=WORKS.map(w=>`<a class="card" href="#${w.id}"><div class="thumb"><img src="${w.cover}" alt="${w.title}"></div><div class="body"><h3>${w.title}</h3><span class="mono">${w.year}</span></div></a>`).join("")+`<div class="card empty"><div><span class="mono">Next project</span><p style="margin:6px 0 0">Added when the current studio ends</p></div></div>`;
+$("#projects").innerHTML=WORKS.map((w,i)=>`
+<section id="${w.id}">
+  <div class="shead"><h2>${String(i+1).padStart(2,"0")} — ${w.course}</h2><span class="mono">${w.year}</span></div>
+  <div class="project">
+    <div class="text"><h3>${w.title}</h3><p class="mono" style="margin-bottom:10px">Brief</p><p>${w.brief}</p>${w.text.map(t=>`<p>${t}</p>`).join("")}
+      <div class="spec">${[["Course",w.course],["Type",w.type],["Medium",w.medium],["Year",w.year]].map(([k,v])=>`<div><span class="mono">${k}</span><span>${v}</span></div>`).join("")}</div></div>
+    <figure class="sheet" style="margin:0"><img src="${w.cover}" alt="${w.title}, full sheet"></figure>
+    ${w.details?`<div class="nine">${w.details.map((d,j)=>`<figure><img src="${d[0]}" alt="${d[1]}"><figcaption><span>${d[1]}</span><span class="mono">${String(j+1).padStart(2,"0")}</span></figcaption></figure>`).join("")}</div>`:""}
+    ${w.reflection?`<div class="reflect"><span class="mono">Reflection</span><p>${w.reflection}</p></div>`:""}
+  </div>
+</section>`).join("");
+$("#cv").innerHTML=Object.entries(SITE.cv).map(([h,rows])=>`<div><h4>${h}</h4><ul>${rows.map(r=>`<li><span>${r[0]}</span><span class="mono">${r[1]}</span></li>`).join("")}</ul></div>`).join("");
+$("#mail").textContent=SITE.email; $("#copy").textContent="© "+new Date().getFullYear()+" "+full;
+</script>
+
+</body>
+</html>
