@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Alireza — architectural engineering student, Islamic Azad University, Karaj. Portfolio of coursework.">
+<title>Alireza · Portfolio sheets (A3)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Karla:wght@300;400;500&display=swap">
+<style>
+/* Layout: A3 landscape sheets (420 × 297 mm) laid on a drafting table, the format schools ask for as PDF. All sizes inside a sheet are in cqw so it scales like paper. */
+:root{
+  --table:#d8d6d0; --sheet:#ffffff; --ink:#1a1a1a; --grey:#77756f; --rule:#dcdad4; --signal:#e0661b;
+  --f-title:"Archivo Narrow","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Karla","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--table:#262624;color-scheme:dark}}
+:root[data-theme="dark"]{--table:#262624;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--table);margin:0;font-family:var(--f-body);color:var(--ink)}
+.desk{padding-inline:clamp(16px,4vw,64px);padding-block:40px 80px;display:grid;gap:clamp(20px,3vw,44px);max-width:1400px;margin-inline:auto}
+.tag{font:500 12px/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:#6b6963;display:flex;justify-content:space-between}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tag{color:#a9a69f}}
+:root[data-theme="dark"] .tag{color:#a9a69f}
+.sheet{container-type:inline-size;background:var(--sheet);aspect-ratio:420/297;width:100%;position:relative;box-shadow:0 1px 2px rgba(0,0,0,.08),0 18px 40px -18px rgba(0,0,0,.35);overflow:hidden;color:var(--ink)}
+.in{position:absolute;inset:3.2cqw;display:grid}
+img{max-width:100%;display:block}
+.cap{font-size:.95cqw;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.h{font-family:var(--f-title);font-weight:700;letter-spacing:-.01em;line-height:.9;margin:0;text-transform:uppercase}
+.p{font-size:1.25cqw;line-height:1.55;margin:0 0 1cqw;max-width:40ch;font-weight:300}
+.foot{position:absolute;left:3.2cqw;right:3.2cqw;bottom:1.6cqw;display:flex;justify-content:space-between}
+.dot{display:inline-block;width:.9cqw;height:.9cqw;background:var(--signal);border-radius:50%;vertical-align:middle;margin-right:.6cqw}
+
+/* 1 cover */
+.cover .in{grid-template-columns:1fr 1fr;gap:3cqw}
+.cover .pic{background:#111;overflow:hidden;margin:-3.2cqw 0 -3.2cqw -3.2cqw}
+.cover .pic img{width:100%;height:100%;object-fit:cover}
+.cover .t{display:flex;flex-direction:column;justify-content:space-between;padding-block:1cqw}
+.cover .h{font-size:9cqw}
+/* 2 about */
+.about .in{grid-template-columns:1.1fr 1fr 1fr;gap:3cqw;align-content:start}
+.about .h{font-size:4.2cqw;margin-bottom:2cqw}
+.about ul{list-style:none;margin:0;padding:0}
+.about li{display:flex;justify-content:space-between;border-top:.08cqw solid var(--rule);padding-block:.8cqw;font-size:1.2cqw}
+.about li span:last-child{color:var(--grey)}
+.about h4{font-family:var(--f-title);font-size:1.4cqw;text-transform:uppercase;letter-spacing:.04em;margin:0 0 .6cqw}
+/* 3 contents */
+.contents .in{grid-template-columns:1fr 2fr;gap:3cqw;align-content:start}
+.contents .h{font-size:4.2cqw}
+.contents .row{display:grid;grid-template-columns:5cqw 1fr auto;border-top:.1cqw solid var(--ink);padding-block:1.2cqw;align-items:baseline}
+.contents .row b{font-family:var(--f-title);font-size:3cqw;text-transform:uppercase}
+.contents .row.soon{border-top-color:var(--rule);color:var(--grey)}
+.contents .row.soon b{font-weight:500}
+/* 4 project */
+.proj .in{grid-template-columns:1fr 1.25fr;gap:3cqw}
+.proj .num{font-family:var(--f-title);font-size:12cqw;line-height:.8;color:var(--signal)}
+.proj .h{font-size:5.4cqw;margin:1.5cqw 0 2cqw}
+.proj .draw{background:#f6f7f8;display:grid;place-items:center;overflow:hidden}
+.proj .draw img{height:100%;width:auto;object-fit:contain}
+.tb{display:grid;grid-template-columns:1fr 1fr;border:.08cqw solid var(--ink);margin-top:auto}
+.tb div{padding:.7cqw .9cqw;border-right:.08cqw solid var(--ink);border-bottom:.08cqw solid var(--ink);font-size:1.1cqw}
+.tb div:nth-child(2n){border-right:0}.tb div:nth-last-child(-n+2){border-bottom:0}
+.tb .cap{display:block;font-size:.8cqw;margin-bottom:.2cqw}
+.col{display:flex;flex-direction:column}
+/* 5 details */
+.det .in{grid-template-columns:1fr 2.2fr;gap:3cqw}
+.det .h{font-size:4.2cqw;margin-bottom:2cqw}
+.det .g{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:1.2cqw;min-height:0}
+.det figure{margin:0;background:#f6f7f8;display:grid;grid-template-rows:1fr auto;min-height:0}
+.det figure img{width:100%;height:100%;object-fit:contain;padding:.6cqw;min-height:0}
+.det figcaption{font-size:.95cqw;padding:.4cqw .6cqw;display:flex;justify-content:space-between;background:var(--sheet)}
+/* 6 back */
+.back .in{place-items:center;text-align:center}
+.back .h{font-size:6cqw}
+</style>
+</head>
+<body>
+
+
+<div class="desk" id="desk"></div>
+
+<script>
+/* ======= EDIT HERE — each work adds two sheets (spread + details) ======= */
+const SITE={name:"Alireza",surname:"",degree:"B.Sc. Architectural Engineering",status:"In progress",school:"Islamic Azad University, Karaj",born:"2007",email:"02xwrld@gmail.com",
+  statement:"I study how an opening decides what a room sees. A window is the smallest piece of architecture that changes a whole space, so that is where I began.",
+  education:[["B.Sc. Architectural Engineering","Current"],["Islamic Azad University, Karaj",""]],
+  skills:[["Freehand drawing","Hand"],["Marker rendering","Hand"],["Model making","Hand"],["[Software]","Digital"]],
+  languages:[["Persian","Native"],["English","[Level]"]]};
+const WORKS=[{title:"Nine Windows",course:"Architectural drawing",year:"2026",medium:"Marker and fineliner on paper",type:"Individual",cover:"../img/windows_clean.jpg",
+  text:["Nine openings, each with its own proportion, mullion pattern and frame depth.","Each frame holds a different view: city, garden, rain, river, blossom, sunset, stars and autumn. The sheet tests how the division of a window changes what reaches the room."],
+  details:[["../img/window_01.jpg","City at dusk"],["../img/window_02.jpg","Garden, morning"],["../img/window_03.jpg","Night rain"],["../img/window_04.jpg","Six panes, one tree"],["../img/window_05.jpg","River in the woods"],["../img/window_06.jpg","Blossom"],["../img/window_07.jpg","Sunset in four panes"],["../img/window_08.jpg","Stars through leaves"],["../img/window_09.jpg","Autumn"]]}];
+/* ===================================================================== */
+const full=(SITE.name+" "+SITE.surname).trim(), pad=n=>String(n).padStart(2,"0");
+let n=0; const sheets=[];
+const foot=()=>`<div class="foot cap"><span>${full} · Portfolio ${new Date().getFullYear()}</span><span>${pad(++n)}</span></div>`;
+const sheet=(cls,label,html)=>sheets.push(`<div><div class="tag"><span>${label}</span><span>A3 landscape</span></div></div><article class="sheet ${cls}">${html}</article>`);
+const list=rows=>`<ul>${rows.map(r=>`<li><span>${r[0]}</span><span>${r[1]}</span></li>`).join("")}</ul>`;
+
+sheet("cover","Sheet 1 · Cover",`<div class="in"><div class="pic"><img src="../img/portrait_mono.jpg" alt="Portrait of ${full}"></div>
+ <div class="t"><span class="cap"><span class="dot"></span>Architecture portfolio</span><div><h1 class="h">${SITE.name}<br>${SITE.surname||""}</h1><p class="p" style="margin-top:2cqw">${SITE.degree} · ${SITE.status}<br>${SITE.school}</p></div><span class="cap">Selected coursework · ${new Date().getFullYear()}</span></div></div>`);
+n++;
+sheet("about","Sheet 2 · About / CV",`<div class="in"><div><h2 class="h">About</h2><p class="p">${SITE.statement}</p><p class="cap" style="margin-top:2cqw">Born ${SITE.born}</p></div>
+ <div><h4>Education</h4>${list(SITE.education)}<h4 style="margin-top:2.4cqw">Languages</h4>${list(SITE.languages)}</div>
+ <div><h4>Skills</h4>${list(SITE.skills)}<h4 style="margin-top:2.4cqw">Contact</h4>${list([["Email",SITE.email]])}</div></div>${foot()}`);
+sheet("contents","Sheet 3 · Contents",`<div class="in"><h2 class="h">Contents</h2><div>${WORKS.map((w,i)=>`<div class="row"><span class="cap">${pad(i+1)}</span><b>${w.title}</b><span class="cap">${w.course} · ${w.year}</span></div>`).join("")}
+ <div class="row soon"><span class="cap">${pad(WORKS.length+1)}</span><b>Next studio project</b><span class="cap">In progress</span></div></div></div>${foot()}`);
+WORKS.forEach((w,i)=>{
+ sheet("proj",`Sheet ${n+1} · Project ${pad(i+1)}`,`<div class="in"><div class="col"><span class="num">${pad(i+1)}</span><h2 class="h">${w.title}</h2>${w.text.map(t=>`<p class="p">${t}</p>`).join("")}
+  <div class="tb"><div><span class="cap">Course</span>${w.course}</div><div><span class="cap">Year</span>${w.year}</div><div><span class="cap">Medium</span>${w.medium}</div><div><span class="cap">Type</span>${w.type}</div></div></div>
+  <div class="draw"><img src="${w.cover}" alt="${w.title}, full sheet"></div></div>${foot()}`);
+ if(w.details) sheet("det",`Sheet ${n+1} · Project ${pad(i+1)} details`,`<div class="in"><div><span class="cap">${pad(i+1)} · Details</span><h2 class="h" style="margin-top:1cqw">${w.details.length} views</h2><p class="p">Each window at full size, with the view it frames.</p></div>
+  <div class="g">${w.details.map((d,j)=>`<figure><img src="${d[0]}" alt="${d[1]}"><figcaption><span>${d[1]}</span><span class="cap">${pad(j+1)}</span></figcaption></figure>`).join("")}</div></div>${foot()}`);
+});
+sheet("back","Last sheet · Back cover",`<div class="in"><div><h2 class="h">${full}</h2><p class="cap" style="margin-top:1.4cqw">${SITE.email}</p></div></div>`);
+document.getElementById("desk").innerHTML=sheets.join("");
+</script>
+
+</body>
+</html>
